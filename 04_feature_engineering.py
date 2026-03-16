@@ -1,12 +1,3 @@
-"""
-DATATHON PASSOS MÁGICOS - FASE 4
-Feature Engineering
-
-Objetivo: Criar features derivadas, selecionar variáveis e analisar importância
-Autor: Manus
-Data: 2024-02-21
-"""
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
