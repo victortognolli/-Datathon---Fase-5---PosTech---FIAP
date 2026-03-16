@@ -1,12 +1,3 @@
-"""
-DATATHON PASSOS MÁGICOS - FASE 3
-Análise Descritiva Exploratória
-
-Objetivo: Gerar insights e visualizações para storytelling
-Autor: Manus
-Data: 2024-02-21
-"""
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
