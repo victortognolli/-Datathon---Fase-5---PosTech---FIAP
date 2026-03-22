@@ -29,7 +29,7 @@ st.set_page_config(
 # ============================================================================
 @st.cache_resource
 def load_model():
-    with open('modelo_risco.pkl', 'rb') as f:
+    with open('deploy_git/modelo_risc.pkl', 'rb') as f:
         return pickle.load(f)
 
 @st.cache_resource
