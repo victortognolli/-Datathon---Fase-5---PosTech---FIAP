@@ -39,17 +39,17 @@ def load_scaler():
 
 @st.cache_resource
 def load_colunas():
-    with open('deploy_git/colunas_modelo.pkl', 'rb') as f:
-        return pickle.load(f)
+    colunas = joblib.load('deploy_git/colunas_modelo.pkl')
+    return list(colunas)
 
 @st.cache_data
 def load_dados():
-    return pd.read_csv('dados_limpos_2024.csv')
+    return pd.read_csv('deploy_git/dados_limpos_2024.csv')
 
 @st.cache_data
 def load_respostas():
     try:
-        with open('respostas_11_perguntas.json', 'r') as f:
+        with open('deploy_git/respostas_11_perguntas.json', 'r') as f:
             return json.load(f)
     except:
         return {}
