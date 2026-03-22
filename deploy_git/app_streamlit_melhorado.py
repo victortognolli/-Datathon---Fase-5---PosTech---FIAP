@@ -254,9 +254,13 @@ elif pagina == "🤖 Predição de Risco":
         
         # Criar DataFrame
         df_entrada = pd.DataFrame([dados_entrada])
+        for col in colunas:
+            if col not in df_entrada.columns:
+                df_entrada[col] = 0
         
+        df_entrada = df_entrada[colunas]
         # Normalizar
-        df_scaled = scaler.transform(df_entrada[colunas])
+        df_scaled = scaler.transform(df_entrada)
         
         # Predição
         probabilidade = modelo.predict_proba(df_scaled)[0]
