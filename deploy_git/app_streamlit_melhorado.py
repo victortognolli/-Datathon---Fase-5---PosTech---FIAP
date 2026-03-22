@@ -29,17 +29,17 @@ st.set_page_config(
 # ============================================================================
 @st.cache_resource
 def load_model():
-    with open('deploy_git/modelo_risc.pkl', 'rb') as f:
+    with open('deploy_git/modelo_risco.pkl', 'rb') as f:
         return pickle.load(f)
 
 @st.cache_resource
 def load_scaler():
-    with open('scaler.pkl', 'rb') as f:
+    with open('deploy_git/scaler.pkl', 'rb') as f:
         return pickle.load(f)
 
 @st.cache_resource
 def load_colunas():
-    with open('colunas_modelo.pkl', 'rb') as f:
+    with open('deploy_git/colunas_modelo.pkl', 'rb') as f:
         return pickle.load(f)
 
 @st.cache_data
